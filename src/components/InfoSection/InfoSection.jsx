@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { InfoSec, InfoColumn, InfoRow, TextWrapper, TopLine, Heading, Subtitle } from './InfoSection.elements'
+import { InfoSec, InfoColumn, InfoRow, TextWrapper, TopLine, Heading, Subtitle, ImgWrapper, Img } from './InfoSection.elements'
 import { Container, Button } from '../../globalStyles'
 
 const InfoSection = ({
@@ -14,6 +14,9 @@ const InfoSection = ({
    description,
    primary,
    buttonLabel,
+   start,
+   alt,
+   img,
 }) => {
    return (
       <>
@@ -31,6 +34,11 @@ const InfoSection = ({
                            </Button>
                         </Link>
                      </TextWrapper>
+                  </InfoColumn>
+                  <InfoColumn>
+                     <ImgWrapper start={start}>
+                        <Img src={img} alt={alt} />
+                     </ImgWrapper>
                   </InfoColumn>
                </InfoRow>
             </Container>
